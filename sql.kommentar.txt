@@ -1,0 +1,37 @@
+novel Tabelle:
+
+    AUTO_INCREMENT
+  
+        ID INT AUTO_INCREMENT PRIMARY KEY: Für diese Tabelle gibt es kein vernüftigen Primärschlüssel der ein Datensatz eindeutig identifiziert
+                                            Eine gute Kombination wäre das Jahr und die Kategorie aber dadruch, dass ein Preis auch geteilt werden KOmbination  
+                                            kann der Datensatz mit dieser KOmbination nicht eindeutig identifiziert werden. Mögleich wäre die Kombination aus
+                                            Jahr, Kategorie und und die laureate_id, diese wäre eindeutig aber es wären zu viele Komponenten
+                                            und man könnte die laureate_id nutzen um eine Tabelle zu erstellen für die Person Infos, um die
+                                            Tabelle in Normalform zu bringen
+    Indizes
+        
+        INDEX idx_year (`Year`): Man würde öfters nach den Jahr suchen um sich diese Anzuzeigen zu lassen deswegen um es zu optimieren das Jahr als INDEX
+        INDEX idx_category (Category): seperat zu Jahr
+
+nobel-analyse Tabelle:
+
+    AUTO_INCREMENT
+
+        Kein AUTO_INCREMENT weil ein Primärschlüssel durch die Kombination von Decade und Kategorie ein Datensatz eindeutig identifizieren
+
+    Indizes
+
+        Auch kein Indizes weil bereits die durch den Primärschlüsel gesetzt sind für die relevanten Spalten
+
+user Tabelle:
+
+    AUTO_INCREMENT
+
+         user_id INT AUTO_INCREMENT PRIMARY KEY: Hier wurde ein AUTO_INCREMENT gesetzt weil username kein Primärschlüssel sein kann, da es nicht eindeutig ist
+                                                  und es auch nicht als UNIQUE gesetzt werden kann, da es mehrere User mit dem gleichen Namen geben kann
+                                                  und es auch nicht als INDEX gesetzt werden kann, da es zu viele Werte gibt und es nicht effizient wäre
+                                                  und es auch nicht als FOREIGN KEY gesetzt werden kann, da es nicht eindeutig ist
+
+    Indizes
+
+        Auch kein Indizes weil der gleiche username nicht oft der gleiche sein wird
