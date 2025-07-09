@@ -1,6 +1,4 @@
-Datenanalyse von Nobel Daten
-
-
+# Datenanalyse von Nobel Daten
 
 # Installation und Einrichtung in einer XAMPP-Umgebung
 
